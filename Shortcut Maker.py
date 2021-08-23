@@ -71,7 +71,7 @@ def browsePng():
 
 
 def callback(event):
-    webbrowser.open_new(event.widget.cget("text"))
+    webbrowser.open_new("https://www.buymeacoffee.com/prayz208")
 
 
 def getShortcutName():
@@ -131,11 +131,13 @@ add_icon = Button(Bottom_Frame, text="Symbol hinzufügen", command=browsePng)
 add_icon.grid(row=3, column=0, ipadx=5)
 Done_file = Button(Bottom_Frame, text="Verknüpfung erstellen", command=end_file)
 Done_file.grid(row=4, column=0, columnspan=2)
-lbl = Label(Bottom_Frame, text=r"https://twitter.com/pryz208", height=0, fg="#0e526c", cursor="hand2")
-lbl.grid(row=5, column=0, columnspan=1)
-Label(Bottom_Frame, text="©2021 Beta V1.0", fg="#0e526c").grid(row=5, column=1)
-Label(Bottom_Frame, text="Drücken sie auf \"Dateipfad hinzufügen\", \noder ziehen sie eine Datei auf das obere graue "
+
+lbl1 = Label(Bottom_Frame, text=r"Spende", fg="#0e526c", height=0, cursor="hand2")
+lbl1.grid(row=5, column=0, columnspan=1)
+lbl1.lower()
+Label(Bottom_Frame, text="©2021 Beta 1.1", fg="#0e526c").grid(row=5, column=1)
+Label(Bottom_Frame, text="Drücken sie auf \"Dateipfad hinzufügen\", \noder ziehen sie eine Datei auf das graue "
                          "Feld",
       fg="#4f4f4f").grid(row=2, column=0, sticky=N, columnspan=2)
-lbl.bind("<Button-1>", callback)
+lbl1.bind("<Button-1>", callback)
 root.mainloop()
